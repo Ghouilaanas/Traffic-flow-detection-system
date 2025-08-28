@@ -11,16 +11,15 @@ In this project, the traffic monitoring system was implemented using **two diffe
 
 ## ⚙️ Tools and Technologies
 
-### Hardware 
-- STM32 Nucleo-L476RG microcontroller board
-- NodeMCU ESP8266 microcontroller board
-- LoRa E32 (868T20D) Module with 868 MHz SMA Antenna
-- 12V Switched-Mode Power Supply
-- 4-Relay Module
+### 1. STM32F407 Discovery + Ultrasonic Sensor Approach 
+- **Microcontroller**: STM32F407 Discovery
+- **Sensor**: Ultrasonic distance sensor
+- **Programming**: STM32CubeIDE / HAL library
+- **Demo**: Narrative walkthrough video demonstrating system operation
   
-### Software
-- **STM32CubeIDE** : An integrated development environment (IDE) for STM32 microcontrollers, providing code editing, compilation, debugging, and peripheral configuration tools.
-- **Arduino IDE** : A user-friendly integrated development environment for programming Arduino boards, supporting code writing, uploading, and serial monitoring.
-- **C (STM32CubeIDE), C++ (Arduino IDE)** : programming languages.
-- **Proteus ISIS** : A software tool for designing and simulating electronic circuits and embedded systems.
+### 2. STM32 Nucleo + Infrared Sensor Approach
+- **Microcontroller**: STM32 Nucleo
+- **Sensor** : Infrared (IR) sensor
+- **Programming**: STM32CubeIDE / HAL library
+- **Demo**: Simple demonstration video showcasing vehicle counting
 ---
