@@ -7,6 +7,8 @@ This project implements a prototype real-time traffic monitoring system built on
 
 The prototype uses traffic detection sensors (infrared, ultrasonic, or other suitable types) strategically placed along the road or entry/exit points to detect and count passing vehicles. The STM32 acts as the central processing unit, handling sensor data acquisition, signal processing, and event management in real-time.
 
+In this project, the traffic monitoring system was implemented using two different hardware approaches to demonstrate the versatility of the prototype. The first approach uses an STM32F407 Discovery board paired with an ultrasonic sensor, providing a comprehensive narrative walkthrough of the system’s real-time vehicle detection, data logging, and traffic analysis capabilities. The second approach uses an STM32 Nucleo board with an infrared sensor, offering a simpler demo to illustrate the core functionality of vehicle counting and data acquisition. Both setups showcase the system’s adaptability to different microcontrollers and sensor types while maintaining accurate traffic monitoring performance.
+
 ## ⚙️ Tools and Technologies
 
 ### Hardware 
