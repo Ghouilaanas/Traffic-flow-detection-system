@@ -14,14 +14,14 @@ In this project, the traffic monitoring system was implemented using **two diffe
 ### 1. STM32F407 Discovery + Ultrasonic Sensor Approach 
 - **Microcontroller**: STM32F407 Discovery
 - **Sensor**: Ultrasonic distance sensor
-- **Display**: I²C LCD
+- **Display**: I²C LCD 16x2
 - **Programming**: Arduino IDE
 - **Demo**: Narrative walkthrough video demonstrating system operation
   
 ### 2. STM32 Nucleo + Infrared Sensor Approach
 - **Microcontroller**: STM32 Nucleo
 - **Sensor** : Infrared (IR) sensor
-- **Display**: I²C LCD
+- **Display**: I²C LCD 16x2
 - **Programming**: STM32CubeIDE / HAL library
 - **Demo**: Simple demonstration video showcasing vehicle counting
 ---
