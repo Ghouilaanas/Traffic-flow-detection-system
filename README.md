@@ -11,14 +11,14 @@ In this project, the traffic monitoring system was implemented using **two diffe
 
 ## ⚙️ Tools and Technologies
 
-### 1. STM32F407 Discovery + Ultrasonic Sensor Approach 
+### 1. STM32F407 Discovery + Analog Infrared Sensor Approach 
 - **Microcontroller**: STM32F407 Discovery
 - **Sensor**: **Sharp** Analog Infrared Sensor
 - **Display**: I²C LCD 16x2
 - **Programming**: Arduino IDE
 - **Demo**: Narrative walkthrough video demonstrating system operation
   
-### 2. STM32 Nucleo + Infrared Sensor Approach
+### 2. STM32 Nucleo-L476RG  + Digital Infrared Sensor Approach
 - **Microcontroller**: STM32 Nucleo
 - **Sensor** :  Digital Infrared (IR) sensor
 - **Display**: I²C LCD 16x2
