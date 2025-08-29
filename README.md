@@ -17,7 +17,7 @@ In this project, the traffic monitoring system was implemented using **two diffe
 - **Display**: I²C LCD 16x2
 - **Programming**: Arduino IDE
 - **Demo**: Narrative walkthrough video demonstrating in french the system operation.
-- 
+  
   [▶️ Download Demo_1_STM32F407_IR_Walkthrough video 🎤](Demo_1_STM32F407_IR_Walkthrough.mp4)
   
 ### 2. STM32 Nucleo-L476RG  + Digital Infrared Sensor Approach
