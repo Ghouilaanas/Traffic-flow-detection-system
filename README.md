@@ -11,7 +11,7 @@ In this project, the traffic monitoring system was implemented using **two diffe
 
 ## ⚙️ Tools and Technologies
 
-### 1. STM32F407 Discovery + Analog Infrared Sensor Approach 
+### 1. STM32 Discovery + Analog Infrared Sensor Approach 
 - **Microcontroller**: STM32F407 Discovery
 - **Sensor**: Analog Infrared Sensor **Sharp**
 - **Display**: I²C LCD 16x2
@@ -20,8 +20,8 @@ In this project, the traffic monitoring system was implemented using **two diffe
   
   [▶️ Download Demo_1_STM32F407_IR_Walkthrough video 🎤](Demo_1_STM32F407_IR_Walkthrough.mp4)
   
-### 2. STM32 Nucleo-L476RG  + Digital Infrared Sensor Approach
-- **Microcontroller**: STM32 Nucleo
+### 2. STM32 Nucleo + Digital Infrared Sensor Approach
+- **Microcontroller**: STM32 Nucleo-L476RG
 - **Sensor** :  Digital Infrared (IR) sensor **KY-033**
 - **Display**: I²C LCD 16x2
 - **Indicators**: LED and buzzer for vehicle detection feedback
