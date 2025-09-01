@@ -22,6 +22,7 @@ In this project, the traffic monitoring system was implemented using **two diffe
   [▶️ Download Demo_1_STM32F407_IR_Walkthrough video 🎤](Demo_1_STM32F407_IR_Walkthrough.mp4)
 #### 1.2 Hardware connections
 ### 2. STM32 Nucleo + Digital Infrared Sensor Approach
+#### 2.1 Hardware components
 - **Microcontroller**: STM32 Nucleo-L476RG
 - **Sensor** :  Digital Infrared (IR) sensor **KY-033**
 - **Display**: I²C LCD 16x2
@@ -30,4 +31,5 @@ In this project, the traffic monitoring system was implemented using **two diffe
 - **Demo**: Simple demonstration video showcasing vehicle counting.
 
   [▶️ Download Demo_2_STM32Nucleo_IR_Simple video](Demo_2_STM32Nucleo_IR_Simple.mp4)
+ #### 2.2 Hardware connections
 ---
