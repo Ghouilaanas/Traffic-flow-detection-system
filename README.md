@@ -24,7 +24,7 @@ In this project, the traffic monitoring system was implemented using **two diffe
 - **Sharp** : 
   - VCC → 5V
   - OUT →
-  - GND →
+  - GND → GND
 - **LCD** :
   - VCC → 5V
   - SDA →
@@ -46,10 +46,10 @@ In this project, the traffic monitoring system was implemented using **two diffe
   - OUT →
   - GND → GND
 - **LCD** :
-  - VCC →
+  - VCC → 5V
   - SDA →
   - SCL →
-  - GND →
+  - GND → GND
 - **Buzzer** : 
   - VCC → 5V
   - OUT →
