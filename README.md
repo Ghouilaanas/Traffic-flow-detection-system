@@ -21,7 +21,7 @@ In this project, the traffic monitoring system was implemented using **two diffe
   
   [▶️ Download Demo_1_STM32F407_IR_Walkthrough video 🎤](Demo_1_STM32F407_IR_Walkthrough.mp4)
 #### 1.2 Hardware connections
--**Sharp**: 
+- **Sharp**: 
   - VCC:
   - OUT:
   - GND:
