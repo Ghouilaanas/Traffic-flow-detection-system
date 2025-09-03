@@ -27,7 +27,7 @@ In this project, the traffic monitoring system was implemented using **two diffe
 - **Sensor** :  Digital Infrared (IR) sensor **KY-033**
 - **Display**: I²C LCD 16x2
 - **Indicators**: LED and buzzer for vehicle detection feedback
-- **Programming**: STM32CubeIDE / HAL library
+- **Programming**: STM32CubeIDE / HAL library (Hardware Abstraction Layer)
 - **Demo**: Simple demonstration video showcasing vehicle counting.
 
   [▶️ Download Demo_2_STM32Nucleo_IR_Simple video](Demo_2_STM32Nucleo_IR_Simple.mp4)
