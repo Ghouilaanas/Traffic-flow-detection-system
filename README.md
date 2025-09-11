@@ -58,3 +58,4 @@ In this project, the traffic monitoring system was implemented using **two diffe
   - OUT → PC8 (Pin configuré comme GPIO_Output)
   - GND → GND
 ---
+## 📖 Guide to Use
