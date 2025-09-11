@@ -60,6 +60,5 @@ In this project, the traffic monitoring system was implemented using **two diffe
 ---
 ## 📖 Guide to Use
 1. Clone this repository:
-
 git clone https://github.com/Ghouilaanas/Traffic-flow-detection-system.git
 2. Open
