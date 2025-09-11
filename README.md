@@ -43,18 +43,18 @@ In this project, the traffic monitoring system was implemented using **two diffe
  #### 2.2 Hardware connections
  - **KY-033** : 
   - VCC → 5V
-  - OUT → PE2
+  - OUT → PC6 (Pin configuré comme GPIO_Input)
   - GND → GND
 - **LCD** :
   - VCC → 5V
-  - SDA → PB9 (Bus I2C1 sur STM32
+  - SDA → PB9 (Bus I2C1 sur STM32)
   - SCL → PB8 (Bus I2C1 sur STM32)
   - GND → GND
 - **Buzzer** : 
   - VCC → 5V
-  - OUT → PD13
+  - OUT → PC7 (Pin configuré comme GPIO_Output)
   - GND → GND
 - **Led** :
-  - VCC → PD14
+  - OUT → PC8 (Pin configuré comme GPIO_Output)
   - GND → GND
 ---
