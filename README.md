@@ -16,7 +16,7 @@ In this project, the traffic monitoring system was implemented using **two diffe
 - **Microcontroller**: STM32F407 Discovery
 - **Sensor**: Analog Infrared Sensor **Sharp**
 - **Display**: I²C LCD 16x2
-- **Programming**: Arduino IDE
+- **Programming**: STM32CubeIDE / HAL library (Hardware Abstraction Layer)
 - **Demo**: Narrative walkthrough video in French demonstrating the system operation.
   
   [▶️ Download Demo_1_STM32F407_IR_Walkthrough video 🎤](Demo_1_STM32F407_IR_Walkthrough.mp4)
