@@ -23,7 +23,7 @@ In this project, the traffic monitoring system was implemented using **two diffe
 #### 1.2 Hardware connections
 - **Sharp** : 
   - VCC → 5V
-  - OUT →
+  - OUT → PA1(ADC1_IN1 sur STM32)
   - GND → GND
 - **LCD** :
   - VCC → 5V
@@ -43,7 +43,7 @@ In this project, the traffic monitoring system was implemented using **two diffe
  #### 2.2 Hardware connections
  - **KY-033** : 
   - VCC → 5V
-  - OUT →
+  - OUT → PE2
   - GND → GND
 - **LCD** :
   - VCC → 5V
@@ -52,9 +52,9 @@ In this project, the traffic monitoring system was implemented using **two diffe
   - GND → GND
 - **Buzzer** : 
   - VCC → 5V
-  - OUT →
+  - OUT → PD13
   - GND → GND
 - **Led** :
-  - VCC → 5V
+  - VCC → PD14
   - GND → GND
 ---
