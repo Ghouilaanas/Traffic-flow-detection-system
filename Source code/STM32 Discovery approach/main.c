@@ -18,11 +18,8 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-int count=0;
-int adcval;
 #include "main.h"
 #include "usb_host.h"
-#include "lcd-i2c.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -127,30 +124,27 @@ int main(void)
     while (1)
     {
     /* USER CODE END WHILE */
-
     MX_USB_HOST_Process();
     HAL_ADC_Start(&hadc1);
-      HAL_ADC_PollForConversion(&hadc1, 5);
-       adcval=HAL_ADC_GetValue(&hadc1);
-      if (  adcval>2000) {
-      lcd16x2_i2c_clear();
-                     count++;
-                     lcd16x2_i2c_printf("Car detected:");
-                     lcd16x2_i2c_setCursor(1,0);
-                     lcd16x2_i2c_printf("%d ",count);
+          HAL_ADC_PollForConversion(&hadc1, 5);
+           adcval=HAL_ADC_GetValue(&hadc1);
+          if (  adcval>2000) {
+          lcd16x2_i2c_clear();
+                         count++;
+                         lcd16x2_i2c_printf("Car detected:");
+                         lcd16x2_i2c_setCursor(1,0);
+                         lcd16x2_i2c_printf("%d ",count);
 
-                	HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
-                    HAL_Delay(350);}
-      else
+                    	HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
+                        HAL_Delay(350);}
+          else
 
-         	  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET);
-
-
-
+             	  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET);
     /* USER CODE BEGIN 3 */
     }
   /* USER CODE END 3 */
 }
+
 /**
   * @brief System Clock Configuration
   * @retval None
