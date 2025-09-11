@@ -61,4 +61,7 @@ In this project, the traffic monitoring system was implemented using **two diffe
 ## 📖 Guide to Use
 1. Clone this repository:
 git clone https://github.com/Ghouilaanas/Traffic-flow-detection-system.git
-2. Open
+2. 📂**Open the STM32CubeIDE project** corresponding to the desired traffic flow detection approach.
+3. 🛠️ **Build and flash the firmware** for that approach onto the appropriate STM32 board.
+4. 🔌 **Connect the sensors, microcontroller, and display** following the wiring diagram for the selected setup.
+5. ⚡ **Power on the system** and **observe the real-time traffic flow readings** on the LCD.
