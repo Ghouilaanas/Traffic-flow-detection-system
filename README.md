@@ -18,7 +18,9 @@ In this project, the traffic monitoring system was implemented using **two diffe
 - **Display**: I²C LCD 16x2
 - **Programming**: STM32CubeIDE / HAL library (Hardware Abstraction Layer)
 - **Demo**: Narrative walkthrough video in French demonstrating the system operation.
+  
   ![Demo1](Demo_1_image.png)
+  
   [▶️ Download Demo_1_STM32F407_IR_Walkthrough video 🎤](Demo_1_STM32F407_IR_Walkthrough.mp4)
 #### 1.2 Hardware connections
 - **Sharp** : 
@@ -38,6 +40,8 @@ In this project, the traffic monitoring system was implemented using **two diffe
 - **Indicators**: LED and buzzer for vehicle detection feedback
 - **Programming**: STM32CubeIDE / HAL library (Hardware Abstraction Layer)
 - **Demo**: Simple demonstration video showcasing vehicle counting.
+
+  ![Demo2](Demo_2_image.png)
 
   [▶️ Download Demo_2_STM32Nucleo_IR_Simple video](Demo_2_STM32Nucleo_IR_Simple.mp4)
  #### 2.2 Hardware connections
