@@ -27,8 +27,8 @@ In this project, the traffic monitoring system was implemented using **two diffe
   - GND → GND
 - **LCD** :
   - VCC → 5V
-  - SDA → PB7 (Bus I2C1 on STM32)
-  - SCL → PB6 (Bus I2C1 on STM32)
+  - SDA → PB7 (I2C1 bus on STM32)
+  - SCL → PB6 (I2C1 bus on STM32)
   - GND → GND
 ### 2. STM32 Nucleo + Digital Infrared Sensor Approach
 #### 2.1 Hardware components
@@ -47,8 +47,8 @@ In this project, the traffic monitoring system was implemented using **two diffe
   - GND → GND
 - **LCD** :
   - VCC → 5V
-  - SDA → PB9 (Bus I2C1 on STM32)
-  - SCL → PB8 (Bus I2C1 on STM32)
+  - SDA → PB9 (I2C1 bus on STM32)
+  - SCL → PB8 (I2C1 bus on STM32)
   - GND → GND
 - **Buzzer** : 
   - VCC → 5V
