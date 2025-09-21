@@ -23,12 +23,12 @@ In this project, the traffic monitoring system was implemented using **two diffe
 #### 1.2 Hardware connections
 - **Sharp** : 
   - VCC → 5V
-  - OUT → PA1 (ADC1_IN1 sur STM32)
+  - OUT → PA1 (ADC1_IN1 on STM32)
   - GND → GND
 - **LCD** :
   - VCC → 5V
-  - SDA → PB7 (Bus I2C1 sur STM32)
-  - SCL → PB6 (Bus I2C1 sur STM32)
+  - SDA → PB7 (Bus I2C1 on STM32)
+  - SCL → PB6 (Bus I2C1 on STM32)
   - GND → GND
 ### 2. STM32 Nucleo + Digital Infrared Sensor Approach
 #### 2.1 Hardware components
@@ -43,19 +43,19 @@ In this project, the traffic monitoring system was implemented using **two diffe
  #### 2.2 Hardware connections
  - **KY-033** : 
   - VCC → 5V
-  - OUT → PC6 (Pin configuré comme GPIO_Input)
+  - OUT → PC6 (Pin configured as GPIO_Input)
   - GND → GND
 - **LCD** :
   - VCC → 5V
-  - SDA → PB9 (Bus I2C1 sur STM32)
-  - SCL → PB8 (Bus I2C1 sur STM32)
+  - SDA → PB9 (Bus I2C1 on STM32)
+  - SCL → PB8 (Bus I2C1 on STM32)
   - GND → GND
 - **Buzzer** : 
   - VCC → 5V
-  - OUT → PC7 (Pin configuré comme GPIO_Output)
+  - OUT → PC7 (Pin configured as GPIO_Output)
   - GND → GND
 - **Led** :
-  - OUT → PC8 (Pin configuré comme GPIO_Output)
+  - OUT → PC8 (Pin configured as GPIO_Output)
   - GND → GND
 ---
 ## 📖 Guide to Use
