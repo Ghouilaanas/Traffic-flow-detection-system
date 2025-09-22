@@ -13,11 +13,11 @@ In this project, the traffic monitoring system was implemented using **two diffe
 
 ### 1. STM32 Discovery + Analog Infrared Sensor Approach 
 #### 1.1 Hardware components
-- **Microcontroller**: STM32F407 Discovery
-- **Sensor**: Analog Infrared Sensor **Sharp**
-- **Display**: I²C LCD 16x2
-- **Programming**: STM32CubeIDE / HAL library (Hardware Abstraction Layer)
-- **Demo**: Narrative walkthrough video in French demonstrating the system operation.
+- **Microcontroller** : STM32F407 Discovery
+- **Sensor** : Analog Infrared Sensor **Sharp**
+- **Display** : I²C LCD 16x2
+- **Programming** : STM32CubeIDE / HAL library (Hardware Abstraction Layer)
+- **Demo** : Narrative walkthrough video in French demonstrating the system operation.
   
   ![Demo1](Demo_1_image.png)
   
@@ -34,11 +34,11 @@ In this project, the traffic monitoring system was implemented using **two diffe
   - GND → GND
 ### 2. STM32 Nucleo + Digital Infrared Sensor Approach
 #### 2.1 Hardware components
-- **Microcontroller**: STM32 Nucleo-L476RG
+- **Microcontroller** : STM32 Nucleo-L476RG
 - **Sensor** :  Digital Infrared (IR) sensor **KY-033**
-- **Display**: I²C LCD 16x2
-- **Indicators**: LED and buzzer for vehicle detection feedback
-- **Programming**: STM32CubeIDE / HAL library (Hardware Abstraction Layer)
+- **Display** : I²C LCD 16x2
+- **Indicators** : LED and buzzer for vehicle detection feedback
+- **Programming** : STM32CubeIDE / HAL library (Hardware Abstraction Layer)
 - **Demo**: Simple demonstration video showcasing vehicle counting.
 
   ![Demo2](Demo_2_image.png)
