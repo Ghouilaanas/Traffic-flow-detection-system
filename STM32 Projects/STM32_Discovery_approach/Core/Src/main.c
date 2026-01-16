@@ -21,7 +21,7 @@
 #include "main.h"
 #include "usb_host.h"
 #include "lcd-i2c.h"
-#Define ADC_Value 2000;
+#define ADC_Value 2000
 int adcval, count=0;
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
