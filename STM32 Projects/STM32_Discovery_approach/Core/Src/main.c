@@ -21,6 +21,7 @@
 #include "main.h"
 #include "usb_host.h"
 #include "lcd-i2c.h"
+#Define ADC_Value 2000;
 int adcval, count=0;
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -126,7 +127,7 @@ int main(void)
     HAL_ADC_Start(&hadc1);
             HAL_ADC_PollForConversion(&hadc1, 5);
              adcval=HAL_ADC_GetValue(&hadc1);
-            if (  adcval>2000) {
+            if (  adcval>ADC_Value) {
             lcd16x2_i2c_clear();
                            count++;
                            lcd16x2_i2c_printf("Car detected:");
