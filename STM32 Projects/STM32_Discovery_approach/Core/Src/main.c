@@ -21,8 +21,12 @@
 #include "main.h"
 #include "usb_host.h"
 #include "lcd-i2c.h"
-#define ADC_Value 2000
-int adcval, count=0;
+#define NB_SAMPLES 10
+#define SENSOR_MIN_DISTANCE_CM   10.0f
+#define SENSOR_MAX_DISTANCE_CM   80.0f
+uint16_t adcval;
+uint8_t count=0;
+float distance;
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -77,6 +81,43 @@ void MX_USB_HOST_Process(void);
   * @brief  The application entry point.
   * @retval int
   */
+uint16_t Read_adc(void)
+{
+    HAL_ADC_Start(&hadc1);
+    HAL_ADC_PollForConversion(&hadc1,5);
+    return HAL_ADC_GetValue(&hadc1);
+}
+
+uint16_t adc_average(void)
+{   uint32_t sum = 0;
+    for (int i = 0; i < NB_SAMPLES; i++)
+    {
+        sum += Read_adc();
+    }
+    return (uint16_t)(sum / NB_SAMPLES);
+}
+
+float adc_to_voltage(uint16_t adc_value){
+ return  voltage = (adc_value * 3.3f) / 4095.0f; 
+}
+
+ void count_traffic(float L){
+  static uint8_t object_present = 0;
+   if(!object_present && L >= SENSOR_MIN_DISTANCE_CM && L <= SENSOR_MAX_DISTANCE_CM){
+      lcd16x2_i2c_clear();
+      object_present = 1;
+       count++;
+       lcd16x2_i2c_printf("Car detected:");
+       lcd16x2_i2c_setCursor(1,0);
+       lcd16x2_i2c_printf("%d ",count);
+       HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
+     }
+     else
+   {
+       HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET);
+       object_present = 0;
+   }
+ }
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -108,14 +149,12 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   lcd16x2_i2c_init(&hi2c1);
-    lcd16x2_i2c_printf("detecting Car...");
-     HAL_Delay(2500);
-     lcd16x2_i2c_clear();
-     lcd16x2_i2c_printf("Car detected:");
-     lcd16x2_i2c_setCursor(1,0);
-
-
-      lcd16x2_i2c_printf("%d ",count);
+  lcd16x2_i2c_printf("detecting Car...");
+  HAL_Delay(2500);
+  lcd16x2_i2c_clear();
+  lcd16x2_i2c_printf("Car detected:");
+  lcd16x2_i2c_setCursor(1,0);
+  lcd16x2_i2c_printf("%d ",count);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -124,21 +163,19 @@ int main(void)
   {
     /* USER CODE END WHILE */
     MX_USB_HOST_Process();
-    HAL_ADC_Start(&hadc1);
-            HAL_ADC_PollForConversion(&hadc1, 5);
-             adcval=HAL_ADC_GetValue(&hadc1);
-            if (  adcval>ADC_Value) {
-            lcd16x2_i2c_clear();
-                           count++;
-                           lcd16x2_i2c_printf("Car detected:");
-                           lcd16x2_i2c_setCursor(1,0);
-                           lcd16x2_i2c_printf("%d ",count);
-
-                      	HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
-                          HAL_Delay(350);}
-            else
-
-               	        HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET);
+    adcval=adc_average();
+    voltage = adc_to_voltage(adcval);
+   
+   if (voltage > 0.35f)   // safety margin
+   {
+    distance = 20.0f / (voltage - 0.3f);         // Formula determined from the datasheet of Sharp sensor
+   }
+   else
+   {
+    distance = SENSOR_MAX_DISTANCE_CM;  // 
+   }                      
+    count_traffic(distance);
+     
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
