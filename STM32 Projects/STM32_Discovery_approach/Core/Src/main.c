@@ -26,7 +26,7 @@
 #define SENSOR_MAX_DISTANCE_CM   80.0f
 uint16_t adcval;
 uint8_t count=0;
-float voltage,distance;
+float V,L;
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -101,9 +101,9 @@ float adc_to_voltage(uint16_t adc_value){
  return  voltage = (adc_value * 3.3f) / 4095.0f; 
 }
 
- void count_traffic(float L){
+ void count_traffic(float d){
   static uint8_t object_present = 0;
-   if(!object_present && L >= SENSOR_MIN_DISTANCE_CM && L <= SENSOR_MAX_DISTANCE_CM){
+   if(!object_present && d >= SENSOR_MIN_DISTANCE_CM && d <= SENSOR_MAX_DISTANCE_CM){
       lcd16x2_i2c_clear();
       object_present = 1;
        count++;
@@ -118,6 +118,16 @@ float adc_to_voltage(uint16_t adc_value){
        object_present = 0;
    }
  }
+float calcul_distance(float voltage){
+if (voltage > 0.35f)   // safety margin
+   {
+    return 20.0f / (voltage - 0.3f);         // Formula determined from the datasheet of Sharp sensor
+   }
+   else
+   {
+    return SENSOR_MAX_DISTANCE_CM;  
+   }                      
+}
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -164,17 +174,9 @@ int main(void)
     /* USER CODE END WHILE */
     MX_USB_HOST_Process();
     adcval=adc_average();
-    voltage = adc_to_voltage(adcval);
-   
-   if (voltage > 0.35f)   // safety margin
-   {
-    distance = 20.0f / (voltage - 0.3f);         // Formula determined from the datasheet of Sharp sensor
-   }
-   else
-   {
-    distance = SENSOR_MAX_DISTANCE_CM;  // 
-   }                      
-    count_traffic(distance);
+    V = adc_to_voltage(adcval);
+    L =calcul_distance(V);
+    count_traffic(L);
      
     /* USER CODE BEGIN 3 */
   }
