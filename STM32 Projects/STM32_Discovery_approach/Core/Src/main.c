@@ -98,7 +98,7 @@ uint16_t adc_average(void)
 }
 
 float adc_to_voltage(uint16_t adc_value){
- return  voltage = (adc_value * 3.3f) / 4095.0f; 
+ return   (adc_value * 3.3f) / 4095.0f; 
 }
 
  void count_traffic(float d){
