@@ -26,7 +26,7 @@
 #define SENSOR_MAX_DISTANCE_CM   80.0f
 uint16_t adcval;
 uint8_t count=0;
-float distance;
+float voltage,distance;
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
