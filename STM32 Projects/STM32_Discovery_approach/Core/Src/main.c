@@ -121,7 +121,7 @@ float adc_to_voltage(uint16_t adc_value){
 float calcul_distance(float voltage){
 if (voltage > 0.35f)   // safety margin
    {
-    return 20.0f / (voltage - 0.3f);         // Formula determined from the datasheet of Sharp sensor
+    return 20.0f / (voltage - 0.3f);         // Formula determined from the datasheet of the Sharp sensor
    }
    else
    {
